@@ -90,12 +90,14 @@ public class PoligonosApp extends Application {
                 poligono.getPoints().addAll(point.x(), point.y());
             }
 
-            final var label1 = newLabel("Perímetro dos Polígonos: " + perimetros(), 500);
-            final var label2 = newLabel("Tipo dos Polígonos: " + tipoPoligonos(), 530);
             poligono.setFill(Color.BLUE);
             poligono.setStroke(Color.BLACK);
-            root.getChildren().addAll(poligono, label1, label2);
+            root.getChildren().add(poligono);
         }
+
+        final var label1 = newLabel("Perímetro dos Polígonos: " + perimetros(), 500);
+        final var label2 = newLabel("Tipo dos Polígonos: " + tipoPoligonos(), 530);
+        root.getChildren().addAll(label1, label2);
 
         mainStage.setTitle("Polígonos");
         mainStage.setScene(scene);
