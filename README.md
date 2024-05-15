@@ -17,7 +17,7 @@ Você precisa ter o JDK 17 ou superior para compilar e executar a aplicação.
 
 ## 3. Rodando o projeto
 
-Para rodar o projeto, clique no botão "Run" no IntelliJ (talvez você precise escolher uma opção na lista do lado esquerdo do botão "Run").
+Para rodar o projeto, clique no botão "Run" no IntelliJ (talvez você precise escolher uma opção na lista do lado esquerdo do botão).
 
 Você também pode abrir um terminal na raiz do projeto e executar um dos comandos abaixo.
 
