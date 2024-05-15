@@ -37,12 +37,14 @@ Ao iniciar, você verá uma tela como abaixo, onde são desenhados vários polí
 
 ## 4. Tarefas a serem implementadas
 
-Sua tarefa é implementar as funções para:
+Sua tarefa principal é implementar as funções para:
 
 - calcular o perímetro (soma da distância entre todos os pontos) de um polígono;
 - indicar qual o tipo de cada polígono (quadrilátero, triângulo, pentágono, etc).
 
 ![Tela inicial](screenshot.jpg)
+
+Por fim, você deve analisar o método `start` da classe [PoligonosApp](src/main/java/com/example/PoligonosApp.java), verificar que recursos de programação funcional podem ser usados nele e fazer as devidas alterações.
 
 ## 5. Testando sua implementação das funções
 
@@ -72,4 +74,4 @@ Como iríamos então calcular o perímetro e descobrir o tipo de cada polígono 
 
 Encapsulamento é um conceito crucial de orientação a objetos. Apesar de estarmos usando POO e programação funcional, POO não é o foco deste projeto. Aqui, queremos treinar o uso de `Stream.flatMap` para processar uma lista de pontos de vários polígonos e por isso não iremos encapsular os métodos indicados em uma nova classe.
 
-Mas de qualquer maneira, você poderia simplesmente ter recebido os dados como do atributo `pontosPoligonos` de outro método ou API (que representasse qualquer outra coisa que não um objeto gráfico como um polígono) e precisasse processar esses dados com `Stream.flatMap`. Aqui usei os pontos de polígonos como fonte de dados pois é fácil de visualizar e entender. 
+Mas de qualquer maneira, você poderia simplesmente ter recebido os dados como do atributo `pontosPoligonos` de outro método ou API (que representasse qualquer outra coisa que não um objeto gráfico como um polígono) e precisasse processar esses dados com `Stream.flatMap`. Aqui usei os pontos de polígonos como fonte de dados pois é fácil de visualizar e entender.
