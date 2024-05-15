@@ -72,4 +72,4 @@ Como iríamos então calcular o perímetro e descobrir o tipo de cada polígono 
 
 Encapsulamento é um conceito crucial de orientação a objetos. Apesar de estarmos usando POO e programação funcional, POO não é o foco deste projeto. Aqui, queremos treinar o uso de `Stream.flatMap` para processar uma lista de pontos de vários polígonos e por isso não iremos encapsular os métodos indicados em uma nova classe.
 
-Mas de qualquer maneira, você poderia simplesmente ter recebido os dados como do atributo `pontosPoligonos` de outro método ou API (que representasse qualquer outra coisa que não um objeto gráfico como um polígono) e precisa processar esses dados com `Stream.flatMap`. Aqui usei os pontos de polígonos como fonte de dados pois é fácil de visualizar e entender. 
+Mas de qualquer maneira, você poderia simplesmente ter recebido os dados como do atributo `pontosPoligonos` de outro método ou API (que representasse qualquer outra coisa que não um objeto gráfico como um polígono) e precisasse processar esses dados com `Stream.flatMap`. Aqui usei os pontos de polígonos como fonte de dados pois é fácil de visualizar e entender. 
