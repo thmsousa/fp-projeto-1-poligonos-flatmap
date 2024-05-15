@@ -44,7 +44,7 @@ Sua tarefa principal é implementar as funções para:
 
 ![Tela inicial](screenshot.jpg)
 
-Por fim, você deve analisar o método `start` da classe [PoligonosApp](src/main/java/com/example/PoligonosApp.java), verificar que recursos de programação funcional podem ser usados nele e fazer as devidas alterações.
+Por fim, você deve analisar o método `start` da classe [PoligonosApp](src/main/java/com/example/PoligonosApp.java), verificar que recursos de programação funcional podem ser usados nele e fazer as devidas alterações. O que poderia ser melhorado no código de tal método? Faça tais alterações.
 
 ## 5. Testando sua implementação das funções
 
