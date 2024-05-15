@@ -137,7 +137,7 @@ public class PoligonosApp extends Application {
      * Calcula o perímetro de cada polígono.
      * O perímetro é a soma da distância entre cada {@link Point} (x,y) do {@link Polygon}.
      * Se você pensar em um polígono como um quadrado, o perímetro representa a distância que você percorreria
-     * se andasse ao redor de da borda do quadrado, do ponto inicial até o último ponto.
+     * se andasse ao redor da borda do quadrado, do ponto inicial até o último ponto.
      *
      * <p>Este método é mais complexo. A implementação dele deve usar a operação {@link Stream#flatMap(Function)} que
      * percorre os itens de {@link #pontosPoligonos} (cada item representando um polígono).
