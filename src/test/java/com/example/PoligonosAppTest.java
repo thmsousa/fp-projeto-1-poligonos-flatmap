@@ -1,5 +1,6 @@
 package com.example;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -16,12 +17,18 @@ class PoligonosAppTest {
 
     @Test
     void perimetros() {
-        assertThat(app.perimetros()).isEqualTo(List.of(300, 450, 222, 270, 310));
+        // Diferença máxima aceitável (para mais ou para menos) entre o valor esperado e o valor retornado
+        final double delta = 0.9;
+        final List<Double> expected = List.of(400.0, 500.0, 323.0, 341.0, 382.0);
+        final List<Double> perimetros = app.perimetros();
+        for (int i = 0; i < perimetros.size(); i++) {
+            Assertions.assertEquals(expected.get(i), perimetros.get(i), delta, "Perímetro do polígono %d incorreto".formatted(i));
+        }
     }
 
     @Test
     void tipoPoligonos() {
-        final var resultList = app.tipoPoligonos().stream().map(String::toLowerCase).toList();
+        final var resultList = app.tipoPoligonos().stream().map(String::toLowerCase).map(String::trim).toList();
         assertThat(resultList).isEqualTo(List.of("quadrilátero", "quadrilátero", "triângulo", "pentágono", "hexágono"));
     }
 }

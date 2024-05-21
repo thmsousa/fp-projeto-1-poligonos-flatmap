@@ -49,11 +49,11 @@ public class PoligonosApp extends Application {
 
         // Pentágono
         List.of(
-                new Point(200, 250),
-                new Point(250, 300),
-                new Point(250, 350),
-                new Point(150, 350),
-                new Point(150, 300)
+            new Point(200, 250),
+            new Point(250, 300),
+            new Point(250, 350),
+            new Point(150, 350),
+            new Point(150, 300)
         ),
 
         // Hexágono
@@ -95,7 +95,8 @@ public class PoligonosApp extends Application {
             root.getChildren().add(poligono);
         }
 
-        final var label1 = newLabel("Perímetro dos Polígonos: " + perimetros(), 500);
+        final List<String> perimetros = perimetros().stream().map(p -> String.format("%.1f", p)).toList();
+        final var label1 = newLabel("Perímetro dos Polígonos: " + perimetros, 500);
         final var label2 = newLabel("Tipo dos Polígonos: " + tipoPoligonos(), 530);
         root.getChildren().addAll(label1, label2);
 
@@ -163,7 +164,7 @@ public class PoligonosApp extends Application {
      *
      * @return uma lista contendo o perímetro de cada polígono
      */
-    protected List<Integer> perimetros(){
+    protected List<Double> perimetros(){
         // TODO Apague esta linha e a próxima e implemente seu código
         return List.of();
     }

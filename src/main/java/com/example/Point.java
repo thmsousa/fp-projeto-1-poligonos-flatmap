@@ -36,6 +36,6 @@ public record Point(double x, double y, double distance) {
      * @param p2 ponto atual, cuja distância será calculada para p1
      */
     public Point(final Point p1, final Point p2) {
-        this(p2.x, p2.y, p1.distance + (int)Point2D.distance(p1.x, p1.y, p2.x, p2.y));
+        this(p2.x, p2.y, p1.distance + Point2D.distance(p1.x, p1.y, p2.x, p2.y));
     }
 }
