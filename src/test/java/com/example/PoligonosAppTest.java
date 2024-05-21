@@ -6,6 +6,11 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Testes unitários para a classe {@link PoligonosApp},
+ * que verifica se os métodos da classe estão funcionando corretamente.
+ * Você não deve alterar este arquivo.
+ */
 class PoligonosAppTest {
     private final PoligonosApp app = new PoligonosApp();
 
