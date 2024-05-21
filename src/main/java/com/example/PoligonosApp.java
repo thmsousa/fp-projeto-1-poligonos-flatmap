@@ -137,7 +137,7 @@ public class PoligonosApp extends Application {
      * Calcula o perímetro de cada polígono.
      * O perímetro é a soma da distância entre cada {@link Point} (x,y) do {@link Polygon}.
      * Se você pensar em um polígono como um quadrado, o perímetro representa a distância que você percorreria
-     * se andasse ao redor de da borda do quadrado, do ponto inicial até o último ponto.
+     * se andasse ao redor da borda do quadrado, do ponto inicial até o último ponto.
      *
      * <p>Este método é mais complexo. A implementação dele deve usar a operação {@link Stream#flatMap(Function)} que
      * percorre os itens de {@link #pontosPoligonos} (cada item representando um polígono).
@@ -147,7 +147,8 @@ public class PoligonosApp extends Application {
      * <p>O record {@link Point} (veja javadoc dele para mais detalhes)
      * possui um construtor {@link Point#Point(Point, Point)} que recebe 2 pontos,
      * cria um novo que contém as coordenadas do segundo ponto e a distância entre os pontos
-     * no atributo {@link Point#distance} (acessado pelo método getter {@link Point#distance()}).</p>
+     * no atributo {@link Point#distance} (acessado pelo método getter {@link Point#distance()}).
+     * Tal construtor já soma a distância entre p1 e p2 com a distância do p1 com o ponto anterior a ele.</p>
      *
      * <p>Assim, você precisaria percorrer todos os pontos de um polígono, pegar um par de pontos e passar
      * para tal construtor. Pegar o terceiro ponto e o ponto criado na chamada do construtor anteriormente,
@@ -157,7 +158,7 @@ public class PoligonosApp extends Application {
      * todos os pontos de um polígono, você deve usar o método reduce no parâmetro recebido no flatMap.</p>
      *
      * <p>Após o flatMap, você vai ter um único ponto para cada polígono, que representa o último ponto encontrado
-     * e contém do perímetro do polígono (a soma da distância dos pontos). Desta forma, basta você retornar
+     * e contém o perímetro do polígono (a soma da distância dos pontos). Desta forma, basta você retornar
      * este resultado como uma nova lista de inteiros.</p>
      *
      * @return uma lista contendo o perímetro de cada polígono
