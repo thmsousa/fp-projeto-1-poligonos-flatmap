@@ -1,11 +1,11 @@
 package com.example;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Testes unitários para a classe {@link PoligonosApp},
@@ -22,7 +22,7 @@ class PoligonosAppTest {
         final List<Double> expected = List.of(400.0, 500.0, 323.0, 341.0, 382.0);
         final List<Double> perimetros = app.perimetros();
         for (int i = 0; i < perimetros.size(); i++) {
-            Assertions.assertEquals(expected.get(i), perimetros.get(i), delta, "Perímetro do polígono %d incorreto".formatted(i));
+            assertEquals(expected.get(i), perimetros.get(i), delta, "Perímetro do polígono %d incorreto".formatted(i));
         }
     }
 
