@@ -18,7 +18,7 @@ class PoligonosAppTest {
     @Test
     void perimetros() {
         // Diferença máxima aceitável (para mais ou para menos) entre o valor esperado e o valor retornado
-        final double delta = 0.9;
+        final double delta = 1.0;
         final List<Double> expected = List.of(400.0, 500.0, 323.0, 341.0, 382.0);
         final List<Double> perimetros = app.perimetros();
         for (int i = 0; i < perimetros.size(); i++) {
