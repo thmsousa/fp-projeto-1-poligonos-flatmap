@@ -147,8 +147,9 @@ public class PoligonosApp extends Application {
      *
      * <p>O record {@link Point} (veja javadoc dele para mais detalhes)
      * possui um construtor {@link Point#Point(Point, Point)} que recebe 2 pontos,
-     * cria um novo que contém as coordenadas do segundo ponto e a distância entre os pontos
-     * no atributo {@link Point#distance} (acessado pelo método getter {@link Point#distance()}).
+     * cria um novo que contém:
+     * (i) as coordenadas do segundo ponto e
+     * (ii) a distância entre os pontos no atributo {@link Point#distance} (acessado pelo método getter {@link Point#distance()}).
      * Tal construtor já soma a distância entre p1 e p2 com a distância do p1 com o ponto anterior a ele.</p>
      *
      * <p>Assim, você precisaria percorrer todos os pontos de um polígono, pegar um par de pontos e passar
