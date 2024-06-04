@@ -9,6 +9,7 @@ import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 
 import java.util.List;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
@@ -159,9 +160,18 @@ public class PoligonosApp extends Application {
      * Mas é exatamente isso que o reduce faz. Então para obter um ponto final contendo a soma da distância entre
      * todos os pontos de um polígono, você deve usar o método reduce no parâmetro recebido no flatMap.</p>
      *
+     * <p>No entanto, considere que temos um triângulo. Se utilizamos o método {@link Stream#reduce(BinaryOperator)},
+     * ele permitirá calcular a distância entre os pontos A -> B e B -> C somente.
+     * Mas para calcular o perímetro, precisamos fechar os pontos, obtendo também a distância entre C -> A.
+     * Assim, podemos começar do A (1o ponto) e indicar que o ponto anterior é o C.
+     * Apesar de iniciar do A, estaríamos calculando as distâncias entre C -> A, A -> B e B -> C, fechando
+     * todos os pontos. Com a versão do reduce indicada acima, não será possível fazer isso.
+     * Desta forma, a versão {@link Stream#reduce(Object, BinaryOperator)} deve ser usada no lugar.
+     * Leia o JavaDoc de tal método para mais detalhes.</p>
+     *
      * <p>Após o flatMap, você vai ter um único ponto para cada polígono, que representa o último ponto encontrado
-     * e contém o perímetro do polígono (a soma da distância dos pontos). Desta forma, basta você retornar
-     * este resultado como uma nova lista de inteiros.</p>
+     * e contém o perímetro do polígono, que pode ser acessado por {@link Point#distance()}.
+     * Desta forma, basta retornar este resultado como uma nova lista de {@link Double}.</p>
      *
      * @return uma lista contendo o perímetro de cada polígono
      */
