@@ -20,7 +20,7 @@ import java.util.stream.Stream;
  */
 public class PoligonosApp extends Application {
     /**
-     * Lista onde cada elemento representa os pontos que forma um polígono.
+     * Lista onde cada elemento representa os pontos que formam um polígono.
      * Cada elemento é então uma lista de pontos com coordenadas x,y.
      * Assim, cada polígono é formado por uma lista de pontos.
      */
