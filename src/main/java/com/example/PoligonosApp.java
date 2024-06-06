@@ -14,7 +14,7 @@ import java.util.function.Function;
 import java.util.stream.Stream;
 
 /**
- * Uma aplicação desktop (usando a biblioteca Swing)
+ * Uma aplicação desktop (usando a biblioteca <a href="http://openjfx.io"> OpenJFX (JavaFX)</a>)
  * que desenha polígonos na tela e calcula o perímetro de cada um:
  * a soma da distância entre todos os seus pontos.
  */
@@ -25,7 +25,7 @@ public class PoligonosApp extends Application {
      * Assim, cada polígono é formado por uma lista de pontos.
      */
     private final List<List<Point>> pontosPoligonos = List.of(
-        // Quadrado (Quadrilátero)
+        // Quadrilátero (Quadrado)
         List.of(
             new Point(50, 50),
             new Point(150, 50),
@@ -33,7 +33,7 @@ public class PoligonosApp extends Application {
             new Point(50, 150)
         ),
 
-        // Retângulo (Quadrilátero)
+        // Quadrilátero (Retângulo)
         List.of(
             new Point(200, 50),
             new Point(400, 50),
