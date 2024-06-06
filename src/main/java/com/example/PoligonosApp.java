@@ -27,16 +27,16 @@ public class PoligonosApp extends Application {
     private final List<List<Point>> pontosPoligonos = List.of(
         // Quadrilátero (Quadrado)
         List.of(
-            new Point(50, 50),
-            new Point(150, 50),
+            new Point( 50,  50),
+            new Point(150,  50),
             new Point(150, 150),
-            new Point(50, 150)
+            new Point( 50, 150)
         ),
 
         // Quadrilátero (Retângulo)
         List.of(
-            new Point(200, 50),
-            new Point(400, 50),
+            new Point(200,  50),
+            new Point(400,  50),
             new Point(400, 100),
             new Point(200, 100)
         ),
