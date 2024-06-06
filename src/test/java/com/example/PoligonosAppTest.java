@@ -6,6 +6,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * Testes unitários para a classe {@link PoligonosApp},
@@ -32,4 +33,17 @@ class PoligonosAppTest {
         final var resultList = app.tipoPoligonos().stream().map(String::toLowerCase).map(String::trim).toList();
         assertThat(resultList).isEqualTo(List.of("quadrilátero", "quadrilátero", "triângulo", "pentágono", "hexágono"));
     }
+
+    @Test
+    void perimetrosRetornaListaImutavel() {
+        final var perimetros = app.perimetros();
+        assertThrows(UnsupportedOperationException.class, () -> perimetros.add(0.0), "A lista retornada não deveria permitir modificações");
+    }
+
+    @Test
+    void tipoPoligonosRetornaListaImutavel() {
+        final var tipoPoligonos = app.tipoPoligonos();
+        assertThrows(UnsupportedOperationException.class, () -> tipoPoligonos.add(""), "A lista retornada não deveria permitir modificações");
+    }
+
 }
