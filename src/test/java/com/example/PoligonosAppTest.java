@@ -21,6 +21,7 @@ class PoligonosAppTest {
         final double delta = 1.0;
         final List<Double> expected = List.of(400.0, 500.0, 323.0, 341.0, 382.0);
         final List<Double> perimetros = app.perimetros();
+        assertThat(perimetros).isNotEmpty();
         for (int i = 0; i < perimetros.size(); i++) {
             assertEquals(expected.get(i), perimetros.get(i), delta, "Perímetro do polígono %d incorreto".formatted(i));
         }
