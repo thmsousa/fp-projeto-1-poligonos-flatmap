@@ -8,9 +8,11 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -135,10 +137,10 @@ public class PoligonosApp extends Application {
         return pontosPoligonos.stream()
                 .flatMap(lista -> Stream.of(switch (lista.size()) {
                     case 3 -> "triângulo";
-                    case 4 -> "Quadrilátero";
-                    case 5 -> "Pentagono";
-                    case 6 -> "Hexagono";
-                    default -> "Polígono";
+                    case 4 -> "quadrilátero";
+                    case 5 -> "pentágono";
+                    case 6 -> "hexágono";
+                    default -> "polígono";
                 })).toList();
     }
 
@@ -184,7 +186,17 @@ public class PoligonosApp extends Application {
      */
     protected List<Double> perimetros(){
         // TODO Apague esta linha e a próxima e implemente seu código
-        return List.of();
+        List<Double> perimetros = pontosPoligonos.stream()
+                .map(pontos -> {
+                    List<Point> pontosFechados = Stream.concat(
+                            pontos.stream(),
+                            Stream.of(pontos.get(0))
+                    ).collect(Collectors.toList());
+
+                    Point primeiroPonto = pontosFechados.get(0);
+                    Point ultimoPonto = pontosFechados.get(pontosFechados.size() - 1);
+
+
     }
 }
 
