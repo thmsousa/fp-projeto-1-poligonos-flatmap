@@ -196,7 +196,16 @@ public class PoligonosApp extends Application {
                     Point primeiroPonto = pontosFechados.get(0);
                     Point ultimoPonto = pontosFechados.get(pontosFechados.size() - 1);
 
+                    Point pontoFinal = pontosFechados.stream()
+                            .reduce(
+                                    new Point(ultimoPonto, primeiroPonto),
+                                    (acc, ponto) -> new Point(acc, ponto)
+                            );
 
+                    return pontoFinal.distance();
+                }).collect(Collectors.toList());
+
+        return Collections.unmodifiableList(perimetros);
     }
 }
 
